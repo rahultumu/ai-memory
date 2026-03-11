@@ -31,6 +31,15 @@ export default function Timeline({ memories }) {
                 {mem.emotion}
               </span>
             </div>
+            {mem.media_url && (
+              <div className="mb-4 rounded-xl overflow-hidden border border-gray-100 shadow-sm bg-black">
+                {mem.media_type === 'image' ? (
+                  <img src={`http://localhost:8000${mem.media_url}`} alt="Memory" className="w-full object-cover max-h-64" />
+                ) : (
+                  <video src={`http://localhost:8000${mem.media_url}`} className="w-full max-h-64" controls />
+                )}
+              </div>
+            )}
             <p className="text-gray-700 text-sm leading-relaxed">{mem.content}</p>
           </div>
         </div>

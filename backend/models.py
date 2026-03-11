@@ -25,6 +25,8 @@ class TokenData(BaseModel):
 
 class MemoryCreate(BaseModel):
     content: str
+    media_url: Optional[str] = None
+    media_type: Optional[str] = None # 'image' or 'video'
     emotion: Optional[str] = None
     tags: Optional[list[str]] = []
     
@@ -34,6 +36,8 @@ class MemoryResponse(BaseModel):
     content: str
     emotion: Optional[str] = None
     tags: Optional[list[str]] = []
+    media_url: Optional[str] = None
+    media_type: Optional[str] = None
     created_at: str
 
 class ChatRequest(BaseModel):

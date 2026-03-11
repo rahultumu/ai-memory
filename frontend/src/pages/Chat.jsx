@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Send, Bot, User } from 'lucide-react';
+import { Send, Bot, User, Brain } from 'lucide-react';
 import api from '../api';
 
 export default function Chat() {

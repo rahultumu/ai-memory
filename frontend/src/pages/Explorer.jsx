@@ -105,6 +105,15 @@ export default function Explorer() {
                         {mem.emotion}
                       </span>
                     </div>
+                    {mem.media_url && (
+                      <div className="mb-4 rounded-xl overflow-hidden border border-gray-100 bg-black">
+                        {mem.media_type === 'image' ? (
+                          <img src={`http://localhost:8000${mem.media_url}`} alt="Memory" className="w-full object-cover max-h-48" />
+                        ) : (
+                          <video src={`http://localhost:8000${mem.media_url}`} className="w-full max-h-48" controls />
+                        )}
+                      </div>
+                    )}
                     <p className="text-gray-800">{mem.content}</p>
                   </div>
                 ))
@@ -135,6 +144,15 @@ export default function Explorer() {
                           {mem.emotion}
                         </span>
                       </div>
+                      {mem.media_url && (
+                        <div className="mb-2 rounded-lg overflow-hidden border border-gray-200 bg-black">
+                          {mem.media_type === 'image' ? (
+                            <img src={`http://localhost:8000${mem.media_url}`} alt="Memory" className="w-full object-cover max-h-32" />
+                          ) : (
+                            <video src={`http://localhost:8000${mem.media_url}`} className="w-full max-h-32" controls />
+                          )}
+                        </div>
+                      )}
                       <p className="text-gray-800 text-sm">{mem.content}</p>
                     </div>
                   ))
