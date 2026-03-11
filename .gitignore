@@ -1,0 +1,22 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
